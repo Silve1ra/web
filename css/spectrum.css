@@ -1,0 +1,40 @@
+
+/* Felipe Silveira */
+/* Maio de 2018 */
+/* eng.fe.silveira@gmail.com*/
+
+h1{
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.art{
+    margin: auto;
+}
+
+td{
+    background-color: black;
+    height: 200px;
+    width: 100px;
+    border: 6px solid white;
+}
+
+#um{
+    background-color: greenyellow;
+}
+
+#dois{
+    background-color: darkviolet;
+}
+
+#tres{
+    background-color: orangered;
+}
+
+#quatro{
+    background-color: olive;
+}
+
+#cinco{
+    background-color:yellow;
+}
