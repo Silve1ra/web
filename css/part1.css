@@ -1,0 +1,29 @@
+/* Felipe Silveira */
+/* Maio de 2018 */
+/* eng.fe.silveira@gmail.com*/
+
+body{
+    background: url(http://kb4images.com/images/hd-wallpaper-widescreen/36329628-hd-wallpaper-widescreen.jpg);
+}
+h1{
+    color: blue;
+}
+
+li{
+    color:rgb(8,84,1);
+}
+
+p{
+    color: #0895a8;
+}
+
+h4{
+    color: rgba(255, 97, 0, 1);
+}
+
+div{
+    background: grey;
+    border-color: white;
+    border-width: 2px;
+    border-style: dashed;
+}
