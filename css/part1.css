@@ -13,6 +13,10 @@ li{
     color:rgb(8,84,1);
 }
 
+li{
+    color:white;
+}
+
 p{
     color: #0895a8;
 }
@@ -21,9 +25,22 @@ h4{
     color: rgba(255, 97, 0, 1);
 }
 
-div{
+.firstdiv{
     background: grey;
     border-color: white;
     border-width: 2px;
     border-style: dashed;
+}
+
+.seconddiv{
+    color:blue;
+    background: black;
+}
+
+#identidade{
+    color: lime
+}
+
+*{
+    color:black
 }
