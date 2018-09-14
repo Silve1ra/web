@@ -1,0 +1,14 @@
+HTML é o esqueleto da página web
+CSS só funciona a partir de um HTML. Serve para deixar a coisa mais "viva"
+JS depende de HTML para funcionar mas não necessariamente do CSS. Serve para deixar a pagina web responsiva. Sem JS ela é estática, não faz nada, com JS é possível execucar ações (de front-end)
+BOOTSTRAP é uma biblioteca de CSS. Em vez de quebrar a cabeça apenas importar o bootstrap e utilizar implementações já feitas.
+DOM une HTML CSS JS e os torna um sistema, um conjunto, para comunicarem entre si. Sem o DOM não há conexão (html e js não se conhecem)
+
+Alguns dos mais importantes atributos do document (DOM):
+document.URL 
+document.body 
+document.head 
+document.links 
+
+**eventos
+https://developer.mozilla.org/en-US/docs/Web/Events
