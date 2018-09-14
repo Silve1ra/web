@@ -1,3 +1,7 @@
+/* Felipe Silveira */
+/* Setembro de 2018 */
+/* eng.fe.silveira@gmail.com*/
+
 var firstName = prompt("First name please: ")
 var lastName = prompt("Last name please: ")
 var age = prompt("How old are you? ")

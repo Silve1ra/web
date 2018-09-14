@@ -1,3 +1,7 @@
+/* Felipe Silveira */
+/* Setembro de 2018 */
+/* eng.fe.silveira@gmail.com*/
+
 var hot = false
 var temp = 100
 
