@@ -1,6 +1,5 @@
-
-var firstName = promp("First name please: ")
-var lastName = promp("Last name please: ")
+var firstName = prompt("First name please: ")
+var lastName = prompt("Last name please: ")
 var age = prompt("How old are you? ")
 var height = prompt("What is your height? ")
 var petName = prompt("What is your pet name? ")
