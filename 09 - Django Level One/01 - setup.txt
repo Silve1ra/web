@@ -1,0 +1,59 @@
+#web framework
+#pinterest, instagram, bitbucket, mozilla
+#usar venv sempre 
+#anaconda
+
+#conda create --name myEnv django
+#source activate myEnv
+
+#install things with pip or conda
+
+#source deactivate
+
+##
+##
+
+#conda create --name myDjangoEnv django
+#na raiz web
+
+#conda info --envs
+
+#
+#
+#
+
+#migrations warnings
+#serve para mover banco de dados de um estilo para outro e vice-versa
+
+##
+##
+#um projeto django é uma coleção de aplicações e configurações que combinadas resultam numa full aplicação web
+#projeto django é diferente de aplicação django
+
+# --------------COMANDOSSSSSSS
+#conda create --name myDjangoEnv django
+#source activate myDjangoEnv
+#django-admin startproject first_project
+#python manage.py runserver
+#ctrl para acessar no localhost
+#python manage.py startapp first_app
+
+# DJANGO PROJECT
+#__init__ ->pacote
+#settings ->store project settings
+#urls     ->store all url project patterns
+#wsgi     ->web server gateway interface para deploy de produção
+#manage   ->para comandos no terminal (python manage.py runserver)
+
+#DJANGO APP
+
+__init__ ->diretorio tratado como pacote
+admin    ->registrar modelos e interface adm
+apps     ->lugar das aplicações e suas respectivas configurações
+models   -> onde se guarda os dados das aplicações, entidades e relações
+tests    ->funções para testar o codigo da aplicação
+views    ->requisições e respostas
+
+migrations folder->onde se guarda dados de informações específicas relacionadas ao models
+
+#mvc: modelo visao controle

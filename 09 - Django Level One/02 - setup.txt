@@ -1,0 +1,33 @@
+Passos:
+1 - Criar um django project
+2 - Criar um django app
+3 - No settings.py do project colocar o first_app na lista de INSTALLED_APPS
+(Para o django saber que o app existe)
+4 - python manage.py runserver para verificar se tudo está ok
+
+5 - Ir no views.py
+6 - from django.http import HttpResponse
+7 - Criar função index
+(Cada view do views.py é definida sua respectiva função e tem pelo menos 1 argumento)
+(cada view retorna um objeto resposta http)
+
+8 - Depois de criar uma view ela tem que ser mapeada no urls.py
+(from first_app import views)
+
+URLS MAPPINGS
+1- Forma direta de mapeio
+views.py para urls.py
+
+2- include function from django.conf.urls
+
+#
+1 - ir no urls.py do project
+from django.conf.urls import include
+url(r'^first_app/', include('first_app.urls')),
+
+2 - criar urls.py no app
+
+###
+deixar o django transferivel
+de um computador para outro
+diferentes SO's
