@@ -1,0 +1,144 @@
+django:
+    free and open source web framework
+
+virtual environment:
+    virtual installation of python and packages
+
+django project:
+    coleção de apps e configurações
+    quando combinadas fazem um full web application
+
+        __init__.py
+            script em branco
+            faz com que o python saiba que esse diretório pode ser usado como um pacote
+
+        settings.py
+            onde se guarda todas as configurações do projeto_quatro
+
+        urls.py
+            onde se guarda todas as urls do projeto_quatro
+            como as diferentes páginas do projeto irão se conectar com o usuário final
+
+        wsgi.py
+            Web Server Gateway Interface
+            fazer deploy do app para produção
+
+    manage.py
+        associa os comandos necessários para construir o app
+
+
+    migrations warnings:
+        como o django se conecta com o banco de dados
+        permite mover um db de um design para outro design (editar um novo campo, criar uma nova coluna)
+
+django app: 
+    funções particulares para o sistema
+    ex: registration app, polling app, comments app, etc
+    podem ser usadas em diferentes projetos django (reusar os seus, reusar de outras pessoas)
+    plugable django application: pegar uma app e conectar em um projeto
+
+        __init__.py
+            script em branco
+            faz com que o python saiba que esse diretório pode ser usado como um pacote
+
+        admin.py
+            onde se registra os models
+
+        apps.py
+            configurações específicas do app
+
+        models.py
+            onde se guarda os dados
+            entidades e relacionamentos entre os dados
+
+        tests.py
+            onde se guarda funções de teste para validar o codigo
+
+        views.py
+            funções para as requisições e respostas
+
+    migrations:
+        aqui ficam guardados os dados do models.py
+
+
+    **
+    views e models são os dois arquivos mais usados
+    padrão do django: model view template 
+
+-----------------------------------------------------------------------------
+
+# máquina virtual
+source /home/silveira/anaconda3/bin/activate
+conda info --envs
+% conda create --name myDjangoEnv django
+% conda create --name myDjangoEnv python=3.7
+source activate myDjangoEnv
+% conda install django
+
+# django project
+django-admin startproject projeto_quatro
+cd projeto_quatro
+python manage.py runserver
+
+# django app
+python manage.py startapp app_quatro
+%fazer o projeto saber que o app existe (settings.py)
+%verificar com runserver se o app foi criado com sucesso
+%criar uma view e mapear sua url
+
+    # view and models
+    import HttpResponse
+    return HttpResponse("Hello World")
+    %cada view retorna uma resposta objeto http
+    %mapear a view no urls.py (path('', views.index, name='index'))
+
+    # url mapping
+    %modo direto: mapear alguma função do views.py direto ao urls.py
+    %usar a função include() do django.conf.urls
+        ela permite um match em expressão regular que retorna a url da aplicação
+        desse modo cada app tem seu próprio arquivo de urls.py separado que sera linkado ao urls.py do projeto
+        a referencia fica no app ao inves de listar tudo na urls principal (projeto)
+
+    %http://127.0.0.1:8000/app_quatro
+
+# django templates
+    parte chave para entender como o django funciona e interage com o website
+    conectar templates com models para exibir dados criados dinamicamente (direto do banco de dados)
+    ele contém as partes estáticas de uma pagina html (partes que são sempre as mesmas, esqueleto da página)
+
+    template tags: {{ variable_here }}
+        possuem uma sintaxe própria
+        essa sintaxe permite injetar conteudo dinamico que as views irão produzir
+        assim afetando no html final (que o usuário vê)
+
+    criar um diretório para os templates
+    criar subdiretórios para cada template específico do app
+
+        fazer o django saber onde estão os templates (criar variavel TEMPLATE_DIR e colocá-la no DIRS do TEMPLATES no settings.py)
+            queremos que um projeto django seja facilmente transferível para outros computadores (diretório do template)
+            usar python os module (em cada computador os diretórios são diferentes) para gerar o path correto
+
+    criar um arquivo html chamado index.html dentro do diretório dos templates
+        dentro desse arquivo é possivel colocar template tags
+        servem para injetar conteúdo dentro do html
+        criar uma variavel {{ insert_me }}
+        conectá-la na app (arquivo views)
+
+    no views.py usar a função render() para chamar o template (e o dado que irá inserir, se quiser)
+
+**
+cada subdiretório template será organizado por cada app (manter a modularização)
+dentro desse subdir estão html, js, etc do app
+dentro do dicionário criado no views esta o conteudo que será injetado no index.html
+templates tem variaveis, tags e filtros
+
+
+**
+django (etapas)
+    desenvolvimento
+            produção
+
+MTV
+    model: persistencia dos dados
+        template: esqueleto (molde de como os dados serão visualizados)
+            views: quais dados serão visualizados
